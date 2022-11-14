@@ -1,0 +1,92 @@
+@import '../../assets/style/allStyle.scss';
+
+.content{
+    position: relative;
+    background: $colorWhite;
+    z-index: 100 !important;
+
+    
+    &__title{
+
+        padding-top: 120px;
+
+        h3{
+            @include poppinsMedium();
+
+            font-size: 46px;
+            color: $colorTitle;
+        }
+    }
+
+    &__slider{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 120px;
+        
+    }
+
+    &__slider-item{
+        position: relative;
+        border-radius: 10px;
+        height: 140px;
+        
+
+        img{
+            width: 240px;
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    &__beforeBlock{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorBlack;
+        opacity: .6;
+        border-radius: 10px;
+    }
+
+    &__slider-text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            @include jostRegular();
+
+            font-size: 20px;
+            color: $colorWhite;
+            
+        }
+    }
+
+    &__slider-next,
+    &__slider-back{
+        position: absolute;
+
+        img{
+            cursor: pointer;
+        }
+    }
+
+    &__slider-back{
+        top: 50px;
+        left: -5%;
+    }
+
+    &__slider-next{
+        top: 50px;
+        right: -5%;
+    }
+}
