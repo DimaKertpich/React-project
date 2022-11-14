@@ -1,4 +1,4 @@
-import React, { useRef, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react';
 import './headerSection.scss';
 import Particles from 'react-tsparticles';
 import Parallax from 'parallax-js';
@@ -29,6 +29,21 @@ function HeaderSection(){
         return () => parallaxInstance.disable();
     }, [])
 
+    window.onload = function(){
+
+        let astronaut = document.querySelector('.header__astronaut-img');
+        let earthIndex = document.querySelector('.header__parallax-earth');
+
+        setTimeout(() =>{
+            astronaut.style.right = '110%'
+
+            setInterval(() =>{
+                astronaut.style.bottom = '600px'
+            }, 2000)
+        }, 4000)
+
+
+    }
 
     return(
         <header className='header'>
@@ -76,7 +91,7 @@ function HeaderSection(){
             <div ref={headerEl} className='header__parallax'>
                 <ul data-depth="0.1" className='header__space-item'>
                     <li><img src={moon} alt="moon"></img></li>
-                    <li><img src={earth} alt="comet"></img></li>
+                    <li><img className='header__parallax-earth' src={earth} alt="comet"></img></li>
                     <li><img src={cometOne} alt="comet"></img></li>
                     <li><img src={cometOne} alt="comet"></img></li>
                     <li><img src={cometTwo} alt="comet"></img></li>
@@ -90,7 +105,6 @@ function HeaderSection(){
 
             <div className='header__astronaut'>
                 <img className='header__astronaut-img' src={astronaut} alt="astronautMove"></img>
-                
             </div>
 
             <Particles className="header__tsparticles" id="tsparticles" 
