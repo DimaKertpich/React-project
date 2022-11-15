@@ -1,0 +1,64 @@
+@import '../../assets/style/allStyle.scss';
+
+
+.technology{
+    position: relative;
+    background: $colorWhite;
+    padding-top: 160px;
+
+    &__beginning{
+
+        text-align: center;
+
+        h4{
+            @include montserratMedium();
+
+            font-size: 46px;
+            color: $colorTechTitle;
+        }
+    }
+
+    &__introduction{
+        padding-top: 80px;
+    }
+
+    &__introduction-subTitle{
+
+        @include montserratRegular();
+
+        font-size: 20px;
+        color: $colorUnderText;
+        padding-top: 16px;
+    }
+
+    &__title{
+        @include poppinsMedium();
+
+        font-size: 36px;
+        padding-right: 120px;
+        color: $colorTitle;
+    }
+
+    &__subTitle{
+        @include poppinsMedium();
+
+        font-size: 22px;
+        padding-top: 40px;
+        color: $colorTitle;
+    }
+
+    &__text{
+
+        p{
+            @include poppinsRegular();
+
+            font-size: 18px;
+            padding-top: 60px;
+            color: $colorTechText;
+        }
+    }
+
+    &__phase{
+        padding-top: 80px;
+    }
+}

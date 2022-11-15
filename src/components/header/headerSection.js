@@ -32,7 +32,6 @@ function HeaderSection(){
     window.onload = function(){
 
         let astronaut = document.querySelector('.header__astronaut-img');
-        let earthIndex = document.querySelector('.header__parallax-earth');
 
         setTimeout(() =>{
             astronaut.style.right = '110%'
@@ -40,7 +39,7 @@ function HeaderSection(){
             setInterval(() =>{
                 astronaut.style.bottom = '600px'
             }, 2000)
-        }, 4000)
+        }, 2000)
 
 
     }
