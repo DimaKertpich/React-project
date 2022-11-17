@@ -1,0 +1,171 @@
+@import '../../assets/style/allStyle.scss';
+
+.footer{
+
+    position: relative;
+    padding: 40px 0;
+    background: $colorFooterBg;
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        ul{
+            margin: 0;
+            padding: 0;
+
+            li{
+                @include poppinsRegular();
+
+                font-size: 22px;
+                list-style-type: none;
+                color: $colorWhite;
+                margin-top: 8px;
+                cursor: pointer;
+                line-height: 40px;
+            }
+
+            li:nth-child(1){
+                @include jostSemiBold();
+
+                font-size: 24px;
+                color: $colorFooterTitle;
+                margin-bottom: 14px;
+            }
+        }
+    }
+
+    &__info{
+        width: 100%;
+        padding-left: 160px;
+    }
+
+    &__info-token{
+        margin-top: 12px;
+        padding: 20px 26px;
+        border-radius: 20px;
+        background: $colorFooterInfoToken;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-token-tablet-wrapper{
+        display: flex;
+
+        label{
+            display: block;
+        }
+    }
+
+
+
+    &__info-token-tablet-img{
+
+        img{
+            width: 44px;
+        }
+    }
+
+    &__info-token-tablet-text{
+        padding: 4px 0 0 4px;
+        line-height: 18px;
+    }
+
+    &__info-token-tablet-text-name{
+        @include poppinsLight();
+
+        font-size: 14px;
+        color: $colorWhite;
+    }
+
+    &__info-token-tablet-text-price{
+        @include jostLight();
+
+        font-size: 14px;
+        color: $colorFooterPriceToken;
+    }
+
+    &__info-token-data{
+        display: flex;
+        justify-content: space-between;
+
+        ul{
+            margin: 0;
+
+            li{
+                list-style-type: none;
+                line-height: 26px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__info-token-data-name{
+        
+        padding: 0;
+
+        li{
+            @include jostRegular();
+
+            color: $colorFooterPriceToken;
+        }
+    }
+
+    &__info-token-data-statistics{
+        padding: 0 0 0 18px;
+
+        li{
+            @include jostRegular();
+
+            color: $colorWhite;
+        }
+    }
+
+    &__info-token-tablet-btn{
+        display: block;
+    }
+
+    &__info-token-tablet-btn{
+        margin-top: 12px;
+        button{
+            @include poppinsLight();
+
+            font-size: 12px;
+            padding: 6px 20px;
+            color: $colorWhite;
+            background: $colorFooterBtn;
+            border: none;
+            border-radius: 16px;
+        }
+    }
+
+    &__info-social-title{
+        margin-top: 22px;
+
+        h4{
+            @include poppinsLight();
+
+            font-size: 24px;
+            color: $colorWhite;
+        }
+    }
+
+    &__info-social-network{
+        max-width: 260px;
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: 34px;
+            cursor: pointer;
+        }
+    }
+}

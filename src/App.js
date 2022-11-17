@@ -1,6 +1,7 @@
 import HeaderSection from "./components/header/headerSection";
 import ContentSection from "./components/content/contentSection";
-import Technology from "./components/technology/technologySection.js";
+import Technology from "./components/technology/technologySection";
+import Footer from './components/footer/footerSection';
 import 'normalize-css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <HeaderSection/>
       <ContentSection/>
       <Technology/>
+      <Footer/>
     </div>
   );
 }
