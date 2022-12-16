@@ -41,7 +41,6 @@ function HeaderSection(){
             }, 2000)
         }, 2000)
 
-
     }
 
     return(
