@@ -1,0 +1,127 @@
+@import '../../../assets/style/allStyle.scss';
+
+.auth{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 100vh;
+    background: $colorBlack;
+    z-index: 1100;
+    background: $bgAuth;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        h4{
+            @include poppinsRegular();
+
+            font-size: 20px;
+            color: $colorAuthTitle;
+            cursor: pointer;
+        }
+    }
+
+    &__wrapper{
+        position: relative;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    &__wrapper-login{
+        position: absolute;
+        top: 0;
+        left: -380px;
+        width: 100%;
+        transition: .3s ease-in;
+    }
+
+    &__signUp,
+    &__signIn{
+        margin-top: 30px;
+    }
+
+    &__signUp-text,
+    &__signIn-text{
+        
+        label{
+            @include poppinsRegular();
+
+            color: $colorWhite;
+        }
+    }
+
+    &__signUp-info,
+    &__signIn-info{
+        margin-top: 14px;
+
+        input{
+            @include poppinsRegular();
+
+            width: 100%;
+            color: $colorWhite;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $colorWhite;
+            outline: none;
+        }
+    }
+
+    &__btn{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 80px;
+
+        button{
+            @include jostRegular();
+
+            font-size: 20px;
+            color: $colorWhite;
+            background: transparent;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &__wrapper-registr{
+        position: absolute;
+        top: 0;
+        right: -380px;
+        width: 100%;
+        transition: .3s ease-in;
+        color: $colorWhite;
+    }
+
+    &__signIn-data-cross{
+        font-size: 12px;
+        color: $colorCross;
+        margin-left: 6px;
+    }
+
+    &__signIn-data-check{
+
+        font-size: 12px;
+        color: $colorCheck;
+        margin-left: 6px;
+    }
+}
+
+.activeAuthTitle{
+    color: $colorWhite !important;
+}
+
+.moveLogin{
+    left: 0;
+    transition: .3s ease-in;
+}
+
+.moveRegistr{
+    right: 0;
+    transition: .3s ease-in;
+}

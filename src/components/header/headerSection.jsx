@@ -9,6 +9,10 @@ import cometOne from '../../assets/images/header/comet-first.png';
 import cometTwo from '../../assets/images/header/comet-second.png';
 import earth from '../../assets/images/header/earth.png';
 import astronaut from '../../assets/images/header/astronaut.png';
+import Auth from './header__auth/authSection';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { activeControlAuth } from '../../store/authUserSlice';
 
 
 function HeaderSection(){
@@ -43,6 +47,10 @@ function HeaderSection(){
 
     }
 
+    let authUser = useSelector( state => state.auth.controlAuth);
+    const dispatch = useDispatch();
+    const showAuthUser = () => dispatch(activeControlAuth(true))
+
     return(
         <header className='header'>
             <div className='container'>
@@ -63,7 +71,7 @@ function HeaderSection(){
                             <li>Home</li>
                             <li>Swap</li>
                             <li>Our Project</li>
-                            <li>Sign up</li>
+                            <li onClick={showAuthUser}>Sign up</li>
                         </ul>
                     </div>
                 </div>
@@ -85,6 +93,8 @@ function HeaderSection(){
                     </div>
                 </div>
             </div>
+
+            {authUser === true && <Auth></Auth>}
 
             <div ref={headerEl} className='header__parallax'>
                 <ul data-depth="0.1" className='header__space-item'>
